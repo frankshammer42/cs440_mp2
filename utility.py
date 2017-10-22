@@ -32,6 +32,13 @@ def print_configuration(configuration):
     print array
 
 
+def occupied(position_to_check, configuration):
+    if configuration[row][col] != 0:
+        return True 
+    else:
+        False
+
+
 def in_board(position_to_check, configuration):
     row_size = len(configuration)
     col_size = len(configuration[0])
@@ -54,6 +61,9 @@ def exactly_two_surroudning(center_color, positions_to_check, configuration):
         return False
 
 
+<<<<<<< HEAD
+        
+=======
 def satisfy_constrain(color_to_fill, position_to_check, configuration):
     # Make sure position to check is not occupied and there is no zigzag
     row, col = position_to_check
@@ -71,31 +81,6 @@ def satisfy_constrain(color_to_fill, position_to_check, configuration):
             return True
 
 
-# configure ,_ ,_ = read_puzzle('./puzzle1.txt')
-# print_configuration(configure)
-# print in_board((4, -1), configure)
-
-def backtracking_dumb(puzzle):    #gameObject puzzle
-
-    puzzle_arr = []
-
-    puzzle_arr.append(puzzle)
-
-    while puzzle_arr.length():
-        cur_puzzle = puzzle_arr.pop()
-        if (isGoal(cur_puzzle)):
-            return cur_puzzle
-        else:
-            #check source
-
-            #check constrain
-
-                #satisfied -> fill -> append
-
-
-    return null
-
-#check if the puzzle satisfies all constrains and return a solution
 def isGoal(puzzle):
     for i in range(len(puzzle)):
         for j in range(len(puzzle[0])):
