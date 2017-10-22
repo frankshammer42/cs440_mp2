@@ -75,3 +75,22 @@ def satisfy_constrain(color_to_fill, position_to_check, configuration):
 # print_configuration(configure)
 # print in_board((4, -1), configure)
 
+def backtracking_dumb(puzzle):    #gameObject puzzle
+
+    puzzle_arr = []
+
+    puzzle_arr.append(puzzle)
+
+    while puzzle_arr.length():
+        cur_puzzle = puzzle_arr.pop()
+        if (isGoal(cur_puzzle)):
+            return cur_puzzle
+        else:
+            #check source
+            
+            #check constrain
+        
+                #satisfied -> fill -> append
+
+    
+    return null
