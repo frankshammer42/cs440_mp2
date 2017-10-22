@@ -11,7 +11,7 @@ def read_puzzle(file_name):
             chars = list(line.rstrip())
             temp_array = []
             char_count = 0
-            for i in chars: 
+            for i in chars:
                 if i == '_':
                     temp_array.append(0)
                     empty_position.append((line_count, char_count))
@@ -39,7 +39,7 @@ def in_board(position_to_check, configuration):
     if row < row_size and 0 <= col_size > col >= 0:
         return True
     else:
-        return False 
+        return False
 
 
 def exactly_two_surroudning(center_color, positions_to_check, configuration):
@@ -50,7 +50,7 @@ def exactly_two_surroudning(center_color, positions_to_check, configuration):
             same_color_count += 1
     if same_color_count == 2:
         return True
-    else: 
+    else:
         return False
 
 
@@ -69,8 +69,8 @@ def satisfy_constrain(color_to_fill, position_to_check, configuration):
             raise ValueError('in_board position length should be bigger than 1')
         if exactly_two_surroudning(color_to_fill, in_board_positions, configuration):
             return True
-        
-        
+
+
 # configure ,_ ,_ = read_puzzle('./puzzle1.txt')
 # print_configuration(configure)
 # print in_board((4, -1), configure)
@@ -87,10 +87,18 @@ def backtracking_dumb(puzzle):    #gameObject puzzle
             return cur_puzzle
         else:
             #check source
-            
+
             #check constrain
-        
+
                 #satisfied -> fill -> append
 
-    
+
     return null
+
+#check if the puzzle satisfies all constrains and return a solution
+def isGoal(puzzle):
+    for i in range(len(puzzle)):
+        for j in range(len(puzzle[0])):
+            if puzzle[i][j] == '0':
+                return False
+    return True
