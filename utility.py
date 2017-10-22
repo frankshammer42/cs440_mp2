@@ -61,26 +61,6 @@ def exactly_two_surroudning(center_color, positions_to_check, configuration):
         return False
 
 
-<<<<<<< HEAD
-        
-=======
-def satisfy_constrain(color_to_fill, position_to_check, configuration):
-    # Make sure position to check is not occupied and there is no zigzag
-    row, col = position_to_check
-    if configuration[row][col] != 0:
-        return False
-    else:
-        possible_surrounding_position = [(row+1, col+1), (row+1, col-1), (row-1, col+1), (row-1, col-1)]
-        in_board_positions = []
-        for position in possible_surrounding_position:
-            if in_board(position, configuration):
-                in_board_positions.append(position)
-        if len(in_board_positions) < 2:
-            raise ValueError('in_board position length should be bigger than 1')
-        if exactly_two_surroudning(color_to_fill, in_board_positions, configuration):
-            return True
-
-
 def isGoal(puzzle):
     for i in range(len(puzzle)):
         for j in range(len(puzzle[0])):
