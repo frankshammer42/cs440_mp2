@@ -49,13 +49,13 @@ def in_board(position_to_check, configuration):
         return False
 
 
-def exactly_two_surroudning(center_color, positions_to_check, configuration):
+def exactly_n_surroudning(center_color, positions_to_check, configuration, n):
     same_color_count = 0
     for position in positions_to_check:
         row, col = position
         if configuration[row][col] == center_color:
             same_color_count += 1
-    if same_color_count == 2:
+    if same_color_count == n:
         return True
     else:
         return False
