@@ -44,7 +44,7 @@ def in_board(position_to_check, configuration):
     row_size = len(configuration)
     col_size = len(configuration[0])
     row, col = position_to_check
-    if row < row_size and 0 <= col_size > col >= 0:
+    if row < row_size and row >=0 and col < col_size and col >= 0:
         return True
     else:
         return False
@@ -59,23 +59,33 @@ def exact_n_surrounding(center_color, position_to_check, configuration, n):
     right_pos = (row+1, col)
     bottom_pos = (row, col+1)
 
+    # if position_to_check == (1,2):
+    #     print "things about 12"
+    #     print top_pos
+    #     print left_pos
+    #     print right_pos
+    #     print bottom_pos
+    #     print "----------"
+
+
     tmp = []
-    if (in_board(top_pos, configuration) and not occupied(top_pos, configuration)):
+    if (in_board(top_pos, configuration)):
         tmp.append(top_pos)
-    if (in_board(left_pos, configuration) and not occupied(left_pos, configuration)):
+    if (in_board(left_pos, configuration)):
         tmp.append(left_pos) 
-    if (in_board(right_pos, configuration) and not occupied(right_pos, configuration)):
+    if (in_board(right_pos, configuration)):
         tmp.append(right_pos)
-    if (in_board(bottom_pos, configuration) and not occupied(bottom_pos, configuration)):
+    if (in_board(bottom_pos, configuration)):
         tmp.append(bottom_pos)
 
-    print tmp
 
     for position in tmp:
         row, col = position
+        print row,col
+        print "-------------"
         if configuration[row][col] == center_color:
             same_color_count += 1
-    print same_color_count
+
     if same_color_count == n:
         return True
     else:

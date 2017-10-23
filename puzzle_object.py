@@ -6,11 +6,9 @@ class Puzzle(object):
         self.curr_pos = color_dict[list(color_dict.keys())[0]][0]
 
     def fill_color(self, pos, color):
-        self.blank_pos.remove(pos)
+        # self.blank_pos.remove(pos)
         self.configuration[pos[0]][pos[1]] = color
         self.curr_pos = pos
-        if pos in self.color_dic[color]:
-            self.color_dict.remove(color)
 
     def is_source(self, pos, color):
         if pos in self.color_dict[color]:
