@@ -1,4 +1,4 @@
-class puzzle(object):
+class Puzzle(object):
     def __init__(self, configuration, color_dic, blank_pos):
         self.configuration = configuration
         self.color_dic = color_dic
