@@ -1,9 +1,9 @@
 class Puzzle(object):
-    def __init__(self, configuration, color_dic, blank_pos):
+    def __init__(self, configuration, color_dict, blank_pos):
         self.configuration = configuration
-        self.color_dic = color_dic
+        self.color_dict = color_dict
         self.blank_pos = blank_pos
-        self.curr_pos = color_dic[list(color_dic.keys())[0]][0]
+        self.curr_pos = color_dict[list(color_dict.keys())[0]][0]
 
     def fill_color(self, pos, color):
         self.blank_pos.remove(pos)
