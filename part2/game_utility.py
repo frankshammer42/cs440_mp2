@@ -264,8 +264,12 @@ def calculate_block_num(player, node):
             if chess_board[i][j] == player:
                 node_initial_pos.append((i,j))
 
-    heuristic_val = 0
+    heuristic_val = 20
     for ip in node_initial_pos:
+        ip_row, ip_col = ip
+        if ip_row < 2 or ip_row > 6:
+            continue
+        # print "start to evaluate"
         # print ip
         move_queue = []
         curr_board = copy.deepcopy(chess_board)
@@ -297,6 +301,11 @@ def calculate_block_num_defensive(player, node):
 
     heuristic_val = 0
     for ip in node_initial_pos:
+        ip_row, ip_col = ip
+        if ip_row < 2 or ip_row > 6:
+            continue
+        # print ip
+        # print "start to evaluate"
         # print ip
         move_queue = []
         curr_board = copy.deepcopy(chess_board)
@@ -326,6 +335,42 @@ def get_number_of_captured(board):
                 white_number += 1
     return 16-black_number, 16-white_number
 
+def my_offensive_heuristic(player, node): #biggest value for me from my home or smallest value from me to opponent home
+    chessboard = node.chess_board
+    heuristic_val = 0
+    opponent = ''
+    if player == 'B':
+        opponent = 'W'
+        for i in range(len(chessboard)):
+            for j in range(len(chessboard[0])):
+                if chessboard[i][j] == player:
+                    heuristic_val += len(chessboard) - i
+    else:
+        opponent = 'B'
+        for i in range(len(chessboard)):
+            for j in range(len(chessboard[0])):
+                if chessboard[i][j] == player:
+                    heuristic_val += i
+    return heuristic_val
+
+def my_defensive_heuristic(player, node): #biggest value from me to opponent
+    chessboard = node.chess_board
+    heuristic_val = 0
+    opponent = ''
+    if player == 'B':
+        opponent = 'W'
+        for i in range(len(chessboard)):
+            for j in range(len(chessboard[0])):
+                if chessboard[i][j] == opponent:
+                    heuristic_val += i
+
+    else:
+        opponent = 'B'
+        for i in range(len(chessboard)):
+            for j in range(len(chessboard[0])):
+                if chessboard[i][j] == opponent:
+                    heuristic_val += len(chessboard) - i
+    return heuristic_val
 
 
 # def test():

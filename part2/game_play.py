@@ -169,7 +169,7 @@ def main():
         # print "----------------------------"
         if side == 'B':
             move_start_time = time.time()
-            current_node, expanded_nodes_number = alpha_beta_tree_search(current_node, 4, side, game_utility.calculate_block_num_defensive,0)
+            current_node, expanded_nodes_number = alpha_beta_tree_search(current_node, 4, side, game_utility.my_defensive_heuristic,0)
             # current_node, expanded_nodes_number = minimax_tree_search(current_node, 3, side, game_utility.offensive_heuristic)
             black_time += time.time() - move_start_time
             total_number_of_nodes_black += expanded_nodes_number
