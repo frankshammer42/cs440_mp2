@@ -82,9 +82,9 @@ def alpha_beta_tree_search(root_node,depth, player, heuristic, off_or_def):
                 max_or_min = 0
 
             if side == 'B':
-                pruning_value = 99999
-            else:
                 pruning_value = 0
+            else:
+                pruning_value = 999999
 
             # pruning_value = first_node.value
             for j in range (0,len(nodes_to_expand)):
@@ -168,9 +168,9 @@ def main():
         # print current_node.print_board()
         # print "----------------------------"
         if side == 'B':
-            # current_node, expanded_nodes_number = alpha_beta_tree_search(current_node, 4, side, game_utility.calculate_block_num_defensive,0)
             move_start_time = time.time()
-            current_node, expanded_nodes_number = minimax_tree_search(current_node, 3, side, game_utility.offensive_heuristic)
+            current_node, expanded_nodes_number = alpha_beta_tree_search(current_node, 4, side, game_utility.calculate_block_num_defensive,0)
+            # current_node, expanded_nodes_number = minimax_tree_search(current_node, 3, side, game_utility.offensive_heuristic)
             black_time += time.time() - move_start_time
             total_number_of_nodes_black += expanded_nodes_number
             current_board = current_node.chess_board
