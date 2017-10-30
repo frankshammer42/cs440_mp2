@@ -174,7 +174,7 @@ def main():
             black_number_of_moves += 1
         else:
             move_start_time = time.time()
-            current_node, expanded_nodes_number = alpha_beta_tree_search(current_node, 3, side, game_utility.offensive_heuristic, 1)
+            current_node, expanded_nodes_number = alpha_beta_tree_search(current_node, 4, side, game_utility.offensive_heuristic, 1)
             white_time += time.time() - move_start_time
             total_number_of_nodes_white += expanded_nodes_number
             #print current_node.value

@@ -1,7 +1,7 @@
 import time
 import utility
-from puzzle_object import Puzzle
 import copy
+from puzzle_object import Puzzle
 import random
 
 def full_configuration(puzzle):
@@ -106,8 +106,8 @@ def actual_dumb(puzzle):
             if satisfy_constrain(new_configuration):
                 new_puzzle = Puzzle(new_configuration, curr_puzzle.color_dict, new_blank_pos)
                 if full_configuration(new_puzzle):
-                    utility.print_configuration(new_puzzle.configuration)
-                    print '\n'
+                    #utility.print_configuration(new_puzzle.configuration)
+                    #print '\n'
                     if goal_configuration(new_puzzle.configuration, start_blank_pos):
                         return new_puzzle
                 else:
