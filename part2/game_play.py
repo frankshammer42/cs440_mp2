@@ -47,6 +47,10 @@ def minimax_tree_search(root_node, depth, player, heuristic):
 
 # TODO: add parameter for H function
 # TODO: add player and initial node
+
+
+#Doing 3 up B down W (92,97)
+#Doing 4 up W down B (92,97)
 def alpha_beta_tree_search(root_node,depth, player, heuristic, off_or_def):
     depth_0_node = [root_node]
     nodes_by_depth = {}

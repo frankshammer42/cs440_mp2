@@ -16,8 +16,8 @@
           <file leaf-file-name="game_play.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/game_play.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="176" column="87" lean-forward="false" selection-start-line="176" selection-start-column="87" selection-end-line="176" selection-end-column="87" />
+                <state relative-caret-position="798">
+                  <caret line="86" column="33" lean-forward="false" selection-start-line="85" selection-start-column="17" selection-end-line="86" selection-end-column="33" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -62,7 +62,7 @@
           <file leaf-file-name="game_utility.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/game_utility.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="533">
+                <state relative-caret-position="4359">
                   <caret line="326" column="42" lean-forward="false" selection-start-line="326" selection-start-column="42" selection-end-line="326" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
@@ -280,7 +280,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game_utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
+        <state relative-caret-position="4359">
           <caret line="326" column="42" lean-forward="false" selection-start-line="326" selection-start-column="42" selection-end-line="326" selection-end-column="42" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -290,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game_play.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="176" column="87" lean-forward="false" selection-start-line="176" selection-start-column="87" selection-end-line="176" selection-end-column="87" />
+        <state relative-caret-position="798">
+          <caret line="86" column="33" lean-forward="false" selection-start-line="85" selection-start-column="17" selection-end-line="86" selection-end-column="33" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
